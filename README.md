@@ -14,9 +14,17 @@ Git
 ## Guia de Instalação
 
 Para instalar a aplicação deve ser executados os seguintes comandos no terminal, no diretório desejado.
-	
+
+```sh
 	git clone -b develop https://github.com/davidaugusto89/front-end-tmdb.git front-end-tmdb
 
 	cd front-end-tmdb
 
 	php -S localhost:4200
+```
+	
+## Acessar Aplicação
+
+Para acessar a aplicação no navegador deve ser utilizando a seguinte url:
+
+
