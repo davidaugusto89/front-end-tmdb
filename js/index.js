@@ -2,6 +2,7 @@ const aplicacao = new Vue({
     el: '#app',
     data () {
         return {
+          searchQuery: null,
           info: null,
           generos: null,
           search: ''
@@ -15,6 +16,17 @@ const aplicacao = new Vue({
         axios
           .get('http://127.0.0.1:8000/api/genre')
           .then(response => (this.generos = response.data.genres));
+      },
+      computed: {
+        resultQuery(){
+          if(this.searchQuery){
+          return this.info.filter((item)=>{
+            return this.searchQuery.toLowerCase().split(' ').every(v => item.title.toLowerCase().includes(v))
+          })
+          }else{
+            return this.info;
+          }
+        }
       },
       methods:{
         getImagem(img){
