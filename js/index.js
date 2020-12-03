@@ -18,7 +18,11 @@ const aplicacao = new Vue({
       },
       methods:{
         getImagem(img){
+          if(img != '' && img != null){
             return 'https://image.tmdb.org/t/p/w500'+img;
+          }else{
+            return 'https://semantic-ui.com/images/wireframe/white-image.png';
+          }
         },
         loadGenero(event){
             if(event.target.value != 'Gênero'){
