@@ -1,0 +1,7 @@
+RewriteCond %{THE_REQUEST} \ /(.*/|)(?:index\.php)?\?id=([^\s&]+) [NC]
+RewriteRule ^ /%1%2? [R=302,L,NE]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !index\.php
+RewriteRule ^(.*/|)([^/]*)$ $1index.php?id=$2 [L]
