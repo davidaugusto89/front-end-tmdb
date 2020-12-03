@@ -4,7 +4,7 @@ Front-end desenvolvido utilizando Vue.js, para consumo de dados do REST API.
 
 ## Requisitos básicos
 
-PHP >= 7.3
+PHP
 
 Composer
 
